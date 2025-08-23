@@ -36,7 +36,7 @@ exclude:
 collections:
   pages:
     output: true
-    permalink: /:path/
+    permalink: /:path.html
 
 defaults:
   -
