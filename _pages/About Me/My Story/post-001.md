@@ -1,4 +1,10 @@
 ---
+title: "My Story"
+layout: page
+permalink: /about-me/my-story/
+---
+
+---
 title: "자기소개"
 date: "2025-08-24"
 thumbnail: "/assets/img/aboutme_자기소개_1.jpg"
