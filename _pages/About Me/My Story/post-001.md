@@ -1,7 +1,7 @@
 ---
 title: "자기소개"
 date: "2025-08-24"
-thumbnail: "/assets/img/aboutme-자기소개-1.jpg"
+thumbnail: "/assets/img/aboutme-자기소개-1.webp"
 ---
 
 # 김송원 (Songwon Kim)
@@ -19,4 +19,4 @@ thumbnail: "/assets/img/aboutme-자기소개-1.jpg"
 끝으로 계산생물학 분야로 진학을 결심하게 해준 김성호 교수님의 전기를 읽다가 발견한 러시아 태생의 화가 바실리 칸딘스키의 말을 남깁니다. 
 > "사람들은 표면에 머무르기를 좋아한다. 왜냐하면 표면에 머무르는 것은 좀 더 적은 노력을 요구하기 때문이다."
 
-![전나무](/assets/img/aboutme-자기소개-1.jpg "제 이름에 포함된 소나무 송, 소나무 과 중에서 제가 제일 좋아하고 닮고 싶은 전나무입니다.")
+![전나무](/assets/img/aboutme-자기소개-1.webp "제 이름에 포함된 소나무 송, 소나무 과 중에서 제가 제일 좋아하고 닮고 싶은 전나무입니다.")
