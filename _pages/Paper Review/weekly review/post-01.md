@@ -1,7 +1,7 @@
 ---
 title: "Self Introduce"
 date: "2025-08-24"
-permalink: /about-me/my-story/
+permalink: /paper-review/weekly-review/
 # thumbnail: "/assets/img/aboutme-자기소개-1.jpg"
 ---
 
