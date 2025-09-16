@@ -10,7 +10,7 @@ thumbnail: "/assets/img/paper-001-01.webp"
 
 # Why This Paper?
 
-Paper Review, 그 중에서도 Weekly Study의 목적은 대학원 생활 동안 주기적으로 내가 관심을 가지거나, 교수님의 추천을 받은 논문들을 읽으며 분야의 큰 흐름을 발견하며 따라가고, 궁극적으로 나만의 research field를 구체화하는 기반을 마련하는 것이다. 처음으로 읽기로 한 논문인 **Simplifying protein engineering with deep learning**은 내가 현재 가장 관심 있어하는 AI 기반의 protein engineering 분야에 속하는 짧은 논문이고, 교수님이 보내주신 것이라 선택되었다. 
+Paper Review, 그 중에서도 Weekly Study의 목적은 대학원 생활 동안 주기적으로 내가 관심을 가지거나, 교수님의 추천을 받은 논문들을 읽으며 분야의 큰 흐름을 발견하고, 궁극적으로 나만의 research field를 구체화하는 기반을 마련하는 것이다. 처음으로 읽기로 한 논문은 **Simplifying protein engineering with deep learning**이다. 내가 현재 가장 관심 있어하는 AI 기반의 protein engineering 분야에 속하는 짧은 논문이고, 교수님이 보내주신 것이라 선택해보았다.  
 
 # About Paper
 
