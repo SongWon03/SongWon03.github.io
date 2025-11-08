@@ -23,8 +23,8 @@ From main texts and figures in
 
 Alignment를 통해서 우리가 알고 싶은 것은 sequence들이 homologous (evolutionary related) 인지 아닌지를 확인하는 것이다. 즉, 단순히 matching +1, mismatch -1 과 같은 식의 score 보다는 진화적 관계를 반영할 수 있는 score가 더 좋다. Homologous or not 이라는 두 가지 가설을 비교할 때, 하나의 좋은 score는 log-odds score이다. 
 
-**likelihood**: $P(x|\theta)$, 특정한 확률 분포의 매개변수가 주어졌을 때, 그 매개변수로 부터 관측값인 x들이 나올 확률을 의미한다. 예를 들어 $\mu=0, \sigma=1$이라는 정규분포의 평균과 표준편차가 주어졌다고 하면, x=0일 확률은 $Normal(x=0|\mu = 0, \sigma = 1)$이 된다.   
-**odds-ratio**: $\frac{P(\theta)}{P(\theta^C)}$로 가설이 참일 확률과 아닐 확률의 비율로 나타나며, 데이터를 관측한 후의 odds ratio인 posterior odds는 bayes theorem에 의해서 prior odds와 likelihood의 곱으로 나타낼 수 있다. 즉, $\frac{P(\theta|x)}{P(\theta^C|x)} = \frac{P(\theta)}{P(\theta^C)} \frac{P(x|\theta)}{P(x|\theta^C)}$이다. 참고로 alignment score에서 고려하고 있는 odds ratio는 prior odds가 1인 경우로, 어느 가설이 참인지에 대한 선험적인 지식이 없는 경우이다. 
+- **likelihood**: $P(x|\theta)$, 특정한 확률 분포의 매개변수가 주어졌을 때, 그 매개변수로 부터 관측값인 x들이 나올 확률을 의미한다. 예를 들어 $\mu=0, \sigma=1$이라는 정규분포의 평균과 표준편차가 주어졌다고 하면, x=0일 확률은 $Normal(x=0|\mu = 0, \sigma = 1)$이 된다.   
+- **odds-ratio**: $\frac{P(\theta)}{P(\theta^C)}$로 가설이 참일 확률과 아닐 확률의 비율로 나타나며, 데이터를 관측한 후의 odds ratio인 posterior odds는 bayes theorem에 의해서 prior odds와 likelihood의 곱으로 나타낼 수 있다. 즉, $\frac{P(\theta|x)}{P(\theta^C|x)} = \frac{P(\theta)}{P(\theta^C)} \frac{P(x|\theta)}{P(x|\theta^C)}$이다. 참고로 alignment score에서 고려하고 있는 odds ratio는 prior odds가 1인 경우로, 어느 가설이 참인지에 대한 선험적인 지식이 없는 경우이다. 
 
 위의 통계적 배경지식을 참고하여, 결국 log-odds score는 *the logarithm of the ratio of the likelihoods of two hypothesis*가 된다. 만약 우리가 각각의 aligned residue pair가 다른 residue들에 대해 statistically independent 하다고 가정하면, 전체 alignment score는 각 aligned pair의 log-odds score의 합으로 생각할 수 있다. 
 
@@ -52,7 +52,7 @@ $$s(a,b) = \frac{1}{\lambda} \log \frac{p_{ab}}{f_a f_b}$$
     - 더 희귀한 amino acid 일수록, 우연에 의해 aligned 되는 것이 더 놀랄만하기 때문에!
     - 실제로 BLOSUM62를 학습시킨 homologous alignment data에는 $p_{LL} = 0.0371, p_{WW} = 0.0065$로 L/L pair의 비율이 더 높지만, tryptophan 자체가 더 희귀한 amino acid이기 때문에 ($f_L = 0.099, f_W = 0.013$) BLOSUM 62의 기본 $\lambda = 0.347$로 계산하고 이를 반올림 하면 각각 +11과 +4의 score를 얻을 수 있다. 
 2) apparently nonconservative alignment of a positively charged glutamic acid = +1, but more innocuous alignment of alanine to leucine get penalized = -1.
-    - A/L pair의 비율이 K/E pair에 비해 homologous alignments에서 더 흔하지만 ($p_AL = 0.0044, p_KE = 0.0041$), A와 L이 더 흔한 amino acid이기 때문에 ($p_A = 0.074, p_L = 0.099, p_K = 0.058, p_E = 0.054$) 결과적으로 -1과 +1의 score로 계산된다. 
+    - A/L pair의 비율이 K/E pair에 비해 homologous alignments에서 더 흔하지만 ($p_{AL} = 0.0044, p_{KE} = 0.0041$), A와 L이 더 흔한 amino acid이기 때문에 ($p_A = 0.074, p_L = 0.099, p_K = 0.058, p_E = 0.054$) 결과적으로 -1과 +1의 score로 계산된다. 
 
 
 # Where did *target frequencies* come from?
