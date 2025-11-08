@@ -23,8 +23,8 @@ From main texts and figures in
 
 Alignment를 통해서 우리가 알고 싶은 것은 sequence들이 homologous (evolutionary related) 인지 아닌지를 확인하는 것이다. 즉, 단순히 matching +1, mismatch -1 과 같은 식의 score 보다는 진화적 관계를 반영할 수 있는 score가 더 좋다. Homologous or not 이라는 두 가지 가설을 비교할 때, 하나의 좋은 score는 log-odds score이다. 
 
-- **likelihood**: $P(x|\theta)$, 특정한 확률 분포의 매개변수가 주어졌을 때, 그 매개변수로 부터 관측값인 x들이 나올 확률을 의미한다. 예를 들어 $\mu=0, \sigma=1$이라는 정규분포의 평균과 표준편차가 주어졌다고 하면, x=0일 확률은 $Normal(x=0|\mu = 0, \sigma = 1)$이 된다.   
-- **odds-ratio**: $\frac{P(\theta)}{P(\theta^C)}$로 가설이 참일 확률과 아닐 확률의 비율로 나타나며, 데이터를 관측한 후의 odds ratio인 posterior odds는 bayes theorem에 의해서 prior odds와 likelihood의 곱으로 나타낼 수 있다. 즉, $\frac{P(\theta|x)}{P(\theta^C|x)} = \frac{P(\theta)}{P(\theta^C)} \frac{P(x|\theta)}{P(x|\theta^C)}$이다. 참고로 alignment score에서 고려하고 있는 odds ratio는 prior odds가 1인 경우로, 어느 가설이 참인지에 대한 선험적인 지식이 없는 경우이다. 
+- **likelihood**: \(P(x|\theta)\), 특정한 확률 분포의 매개변수가 주어졌을 때, 그 매개변수로 부터 관측값인 x들이 나올 확률을 의미한다. 예를 들어 \(\mu=0, \sigma=1\)이라는 정규분포의 평균과 표준편차가 주어졌다고 하면, x=0일 확률은 \(Normal(x=0|\mu = 0, \sigma = 1)\)이 된다.   
+- **odds-ratio**: \(\frac{P(\theta)}{P(\theta^C)}\)로 가설이 참일 확률과 아닐 확률의 비율로 나타나며, 데이터를 관측한 후의 odds ratio인 posterior odds는 bayes theorem에 의해서 prior odds와 likelihood의 곱으로 나타낼 수 있다. 즉, \(\frac{P(\theta|x)}{P(\theta^C|x)} = \frac{P(\theta)}{P(\theta^C)} \frac{P(x|\theta)}{P(x|\theta^C)}\)이다. 참고로 alignment score에서 고려하고 있는 odds ratio는 prior odds가 1인 경우로, 어느 가설이 참인지에 대한 선험적인 지식이 없는 경우이다. 
 
 위의 통계적 배경지식을 참고하여, 결국 log-odds score는 *the logarithm of the ratio of the likelihoods of two hypothesis*가 된다. 만약 우리가 각각의 aligned residue pair가 다른 residue들에 대해 statistically independent 하다고 가정하면, 전체 alignment score는 각 aligned pair의 log-odds score의 합으로 생각할 수 있다. 
 
