@@ -45,7 +45,7 @@ $$s(a,b) = \frac{1}{\lambda} \log \frac{p_{ab}}{f_a f_b}$$
 
 $$s(a,b) = \frac{1}{\lambda} \log \frac{p_{ab}}{f_a f_b}$$
 
-여기서는 위의 score function을 통해 BLOSUM62에서 계산된 결과들의 예시와 비직관적인 부분들에 대한 detail을 정리할 것이다.  
+여기서는 위의 score function을 통해 BLOSUM62에서 계산된 결과들의 예시와 비직관적인 부분들에 대한 detail을 정리할 것이다. 
 
 1) tryptophan (W/W) pairs score = +11, leucine (L/L) pairs score = +4. 
     - 왜 모든 동일 residue pairs가 같은 score를 가지지 않을까?
