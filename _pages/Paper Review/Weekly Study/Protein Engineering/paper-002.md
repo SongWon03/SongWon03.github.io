@@ -2,9 +2,9 @@
 
 title: "[Cell Systems] Exploring "dark-matter" protein folds using deep learning"
 
-date: "2025-12-29"
+date: "2025-12-28"
 
-# thumbnail: "/assets/img/thumbnail/proteinengineering-001.webp"
+thumbnail: "/assets/img/thumbnail/proteinengineering-001.png"
 
 ---
 
@@ -67,7 +67,7 @@ Weekly Study에서 두 번째로 다루어 볼 논문은 **Exploring "dark-matte
 
 다만, 이러한 방법론에서도 $\beta$-helix folds, $\beta$-Prisms와 같이 같은 수의 $\beta$ sheet를 가지는 것처럼 비슷한 형태인 경우, sketch가 잘 구별되지 않아서 결과적으로 TM score가 낮게 나오는 경우가 많다는 것을 언급하고 있는데, 만약 내가 나중에 비슷한 형태의 경량화된 모델이나 architecture를 설계할 때 고려해야 할 breakthrough가 필요한 부분으로써 함께 정리해보았다.  
 
-![](/assets/img/thumbnail/proteinengineering-001.webp)
+![](/assets/img/thumbnail/proteinengineering-001.png)
 
 ### Large-scale *de novo* design of native topologies  
 
