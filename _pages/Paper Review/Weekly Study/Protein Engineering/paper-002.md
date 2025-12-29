@@ -4,7 +4,7 @@ title: "[Cell Systems] Exploring "dark-matter" protein folds using deep learning
 
 date: "2025-12-29"
 
-thumbnail: "/assets/img/thumbnail/proteinengineering-001.png"
+thumbnail: "/assets/img/thumbnail/proteinengineering-001.webp"
 
 ---
 
@@ -55,7 +55,7 @@ Weekly Study에서 두 번째로 다루어 볼 논문은 **Exploring "dark-matte
 
 ### A computational pipeline for enhanced backbone designability  
 
-- **Variational Autoencoder (VAE)**: Variational autoencoder는 기본적으로 input **x**를 받아 **x**를 condition으로 이용하는 conditional distribution으로 정의되는 encoder **q(z|x)** 로부터 latent variable **z**를 샘플링하여 얻고, 다시 **z**를 condition으로 이용해서 원래의 **x**를 복원하는 decoder **p(x|z)** 를 구성하여 최종적으로 **x'** 를 얻어 input을 복원할 수 있도록 학습하는 architecture이다. 
+- **Variational Autoencoder (VAE)**: Variational autoencoder는 기본적으로 input **x**를 받아 **x**를 condition으로 이용하는 conditional distribution으로 정의되는 encoder $q(z\mid x)$ 로부터 latent variable **z**를 샘플링하여 얻고, 다시 **z**를 condition으로 이용해서 원래의 **x**를 복원하는 decoder $p(x\mid z)$ 를 구성하여 최종적으로 **x'** 를 얻어 input을 복원할 수 있도록 학습하는 architecture이다. 
 
 이들이 제안한 *de novo* design workflow의 핵심이 되는 deep learning module은 **Genesis**라는 module로, 앞서 언급했듯 convolutional VAE에 기반하고 있고, low-resolution sketches에 native-like structural feature를 부여하여 sharp feature를 만들어주는 역할이다. 내가 이해한 바로는, pre-training 과정에서 native fold의 feature를 복원하도록 encoder/decoder를 학습하고, 이후 다량의 sketches & native fold pair를 이용해서 fine tuning하여 sketches를 input으로 주면 그의 native-like structural feature를 출력하도록 한 것이다. 그리고 결국 Genesis의 output은 trRosetta 같은 모듈이 사용 가능한 backbone을 제공하는 것이기 때문에, 실제 학습 시에 fold에서 loop 부분은 corruption을 시켜 학습할 것으로 보인다. 실제 추론 과정에서 Genesis에 들어가는 input은 이동이나 회전에 invariant하도록 atomic coordinate가 아닌, pairwise distance & orientation을 이용한다. 즉, 과정을 정리하면 
 1) sketch에서 실수 값의 pairwise distance & orientation map (Blurry features)을 얻고
@@ -67,7 +67,7 @@ Weekly Study에서 두 번째로 다루어 볼 논문은 **Exploring "dark-matte
 
 다만, 이러한 방법론에서도 $\beta$-helix folds, $\beta$-Prisms와 같이 같은 수의 $\beta$ sheet를 가지는 것처럼 비슷한 형태인 경우, sketch가 잘 구별되지 않아서 결과적으로 TM score가 낮게 나오는 경우가 많다는 것을 언급하고 있는데, 만약 내가 나중에 비슷한 형태의 경량화된 모델이나 architecture를 설계할 때 고려해야 할 breakthrough가 필요한 부분으로써 함께 정리해보았다.  
 
-![](/assets/img/thumbnail/proteinengineering-001.png)
+![](/assets/img/thumbnail/proteinengineering-001.webp)
 
 ### Large-scale *de novo* design of native topologies  
 
