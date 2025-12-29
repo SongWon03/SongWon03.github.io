@@ -1,6 +1,6 @@
 ---
 
-title: "[Cell Systems] Exploring "dark-matter" protein folds using deep learning"
+title: "Exploring "dark-matter" protein folds using deep learning"
 
 date: "2025-12-28"
 
