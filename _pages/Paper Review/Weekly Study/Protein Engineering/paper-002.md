@@ -4,7 +4,7 @@ title: "[Cell Systems] Exploring "dark-matter" protein folds using deep learning
 
 date: "2025-12-29"
 
-thumbnail: "/assets/img/thumbnail/proteinengineering-001.webp"
+# thumbnail: "/assets/img/thumbnail/proteinengineering-001.webp"
 
 ---
 
