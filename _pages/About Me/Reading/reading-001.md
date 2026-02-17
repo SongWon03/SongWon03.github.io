@@ -59,5 +59,6 @@ thumbnail: "/assets/img/thumbnail/reading-001.png"
 
 이 책을 읽으면서 추천해주신 분에게도 감사했고, 추천해주고 싶은 친구들도 있었는데, 그렇게 부담되는 책이 아니라 꼭 한 번 읽어봤으면 좋겠다.  
 
+![](/assets/img/thumbnail/reading-001.png)
 
 **화양, <<헛수고의 심리학>>, 하은지 번역, 파인북, 1-256page.** 
