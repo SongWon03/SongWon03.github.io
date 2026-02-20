@@ -4,7 +4,7 @@ title: "[Computational Genome Analysis: An Introduction] Chapter 1~5"
 
 date: "2026-01-30"
 
-thumbnail: "/assets/img/thumbnail/books-001.jpg"
+thumbnail: "/assets/img/thumbnail/Books/books-000.jpg"
 
 ---
 
@@ -28,15 +28,15 @@ thumbnail: "/assets/img/thumbnail/books-001.jpg"
 
 학부 과정 동안 생명과학과 데이터과학을 이중 전공하면서 나름의 노력으로 두 학문에 대한 배경지식을 쌓으려 노력했었는데, 그 시간들이 많은 도움이 되고 있는 것 같다. 데이터과학에서 배웠던 수리/통계적 지식들이 조금 더 근본적으로 어떤 의미를 가지고 있으며, 생물학의 문제를 풀어내는 데에 어떤 방식으로 활용되는 지를 배워가고 있고, 때로는 조금 어렵지만 때로는 짜릿한 마음이 든다.  
 
-![](/assets/img/thumbnail/books-001.jpg)
-![](/assets/img/thumbnail/books-002.jpg)
-![](/assets/img/thumbnail/books-003.jpg)
-![](/assets/img/thumbnail/books-004.jpg)
-![](/assets/img/thumbnail/books-005.jpg)
-![](/assets/img/thumbnail/books-006.jpg)
-![](/assets/img/thumbnail/books-007.jpg)
-![](/assets/img/thumbnail/books-008.jpg)
-![](/assets/img/thumbnail/books-009.jpg)
-![](/assets/img/thumbnail/books-010.jpg)
-![](/assets/img/thumbnail/books-011.jpg)
-![](/assets/img/thumbnail/books-012.jpg)
+![](/assets/img/thumbnail/Books/books-001.jpg)
+![](/assets/img/thumbnail/Books/books-002.jpg)
+![](/assets/img/thumbnail/Books/books-003.jpg)
+![](/assets/img/thumbnail/Books/books-004.jpg)
+![](/assets/img/thumbnail/Books/books-005.jpg)
+![](/assets/img/thumbnail/Books/books-006.jpg)
+![](/assets/img/thumbnail/Books/books-007.jpg)
+![](/assets/img/thumbnail/Books/books-008.jpg)
+![](/assets/img/thumbnail/Books/books-009.jpg)
+![](/assets/img/thumbnail/Books/books-010.jpg)
+![](/assets/img/thumbnail/Books/books-011.jpg)
+![](/assets/img/thumbnail/Books/books-012.jpg)
