@@ -355,7 +355,7 @@
   right:2rem;
   width:clamp(10rem, calc((100vw - var(--pagewidth-desktop))/2 - 2rem), 11rem);
   padding:.75rem;
-  border:2px solid #000;
+  border:none;
   border-radius:.75rem;
   background:rgba(255,255,255,.94);
   box-shadow:0 10px 24px rgba(52,92,50,.12);

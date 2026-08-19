@@ -68,6 +68,13 @@
         </button>
     </div>
     {%- if page_type == "category" and page_level == 1 and site.goatcounter_code -%}
+    {%- assign total_posts = 0 -%}
+    {%- for site_page in site.pages -%}
+        {%- assign site_page_name = site_page.path | split: "/" | last -%}
+        {%- if site_page.path contains "_pages/" and site_page_name != "index.md" -%}
+            {%- assign total_posts = total_posts | plus: 1 -%}
+        {%- endif -%}
+    {%- endfor -%}
     <aside id="visitor-card" class="visitor-card" data-goatcounter-code="{{ site.goatcounter_code }}" aria-label="Site visitor statistics">
         <p class="visitor-card-title">SongWon03's Github Page</p>
         <div class="visitor-stat">
@@ -77,6 +84,10 @@
         <div class="visitor-stat">
             <span>Today's visitors</span>
             <strong id="visitor-today">—</strong>
+        </div>
+        <div class="visitor-stat">
+            <span>Total posts</span>
+            <strong id="visitor-posts">{{ total_posts }}</strong>
         </div>
     </aside>
     {%- endif -%}
