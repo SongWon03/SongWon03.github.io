@@ -2,6 +2,7 @@ title: Songwon Kim
 description: "Satellite - jekyll blog theme"
 logo_img: "/assets/img/favicon.webp"
 profile_img: "/assets/img/profile.webp"
+cv_file: "/assets/files/Songwon-Kim-CV.pdf"
 
 # Social Links
 email: example@gmail.com
@@ -10,6 +11,7 @@ twitter_username: twitter
 instagram_username: instagram
 linkedin_username: linkedin
 facebook_username: facebook
+google_scholar_url: "#" # Replace with your Google Scholar profile URL
 
 # External API
 giscus_repo: "SongWon03/SongWon03.github.io"

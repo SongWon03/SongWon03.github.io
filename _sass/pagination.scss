@@ -84,7 +84,7 @@
   .category:hover {
     color:$color-rose;
   }
-  .category{ color:mediumseagreen !important; }
+  .category{ color:#AAD31E !important; }
 
   .txt_post {
     display:-webkit-box;
@@ -221,6 +221,7 @@
 
   .info-post {
     margin-top:auto;
+    padding-top:.625rem;
 
     .category,
     .date {

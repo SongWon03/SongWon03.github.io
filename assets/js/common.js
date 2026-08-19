@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function(){
     // search box
     const searchButton = document.querySelectorAll("#btn-search");
     const cancelButton = document.querySelector('#btn-clear');
+    const closeSearchButton = document.querySelector('#btn-close-search');
     const searchPage = document.querySelector("#search");
 
     if (searchButton) {
@@ -90,6 +91,12 @@ document.addEventListener('DOMContentLoaded', function(){
             if (searchBar.contains(target))
                 return;
 
+            searchPage.classList.remove('active');
+        });
+    }
+
+    if (closeSearchButton) {
+        closeSearchButton.addEventListener('click', function() {
             searchPage.classList.remove('active');
         });
     }

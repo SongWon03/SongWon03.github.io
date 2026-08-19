@@ -40,10 +40,15 @@
     width:9rem;
     height:9rem;
     object-fit:contain;
-    outline:3px solid rgba(255,255,255,.85);
-    outline-offset:4px;
+    box-sizing:border-box;
+    border:3px solid #fff;
+    box-shadow:0 8px 20px rgba(58,36,26,.16);
   }
 }
+
+.profile-actions,
+.profile-quick-links,
+.cv-download { display:none; }
 
 .site-tab {
   padding:8px;
@@ -93,13 +98,21 @@
         padding:6px;
         transition:.3s;
 
-        svg {
+        svg,
+        img {
+          display:block;
+          margin:auto;
           width:16px;
+          height:16px;
+          object-fit:contain;
           fill:dimgrey;
         }
 
+        .google-scholar-icon { filter:invert(.4); }
+
         &:hover{
           svg { fill:orange; }
+          .google-scholar-icon { filter:invert(48%) sepia(88%) saturate(1148%) hue-rotate(1deg) brightness(92%) contrast(97%); }
 
           transform:scale(1.5) translateY(-12.5%);
         }
@@ -167,9 +180,15 @@
 }
 
 #contact {
-  ul li a svg { width:18px; }
+  ul li a {
+    svg,
+    img {
+      width:20px;
+      height:20px;
+    }
+  }
 
-  span { font-size:1rem; }
+  span { font-size:1.0625rem; }
 }
 
 }
@@ -199,10 +218,57 @@
 
 .site-avatar {
   display:inline-block;
-  transform:translateX(-.75rem);
+  transform:translateX(-1rem);
 }
 
 .site-avatar img { display:inline-block; }
+
+.profile-actions {
+  display:flex;
+  width:#{$sidebarwd};
+  align-items:center;
+  justify-content:flex-start;
+  gap:.25rem;
+  padding-left:3.25rem;
+  box-sizing:border-box;
+}
+
+.profile-quick-links {
+  display:grid;
+  grid-template-columns:3rem;
+  grid-template-rows:repeat(3, 3rem);
+}
+
+.cv-download {
+  display:flex;
+  width:3rem;
+  height:3rem;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:transparent;
+  transition:background-color .25s ease, box-shadow .25s ease, transform .25s ease;
+
+  img {
+    display:block;
+    width:1.55rem;
+    height:1.55rem;
+    object-fit:contain;
+    transition:transform .25s ease;
+  }
+
+  &:hover,
+  &:focus-visible {
+    z-index:1;
+    background:#fff;
+    box-shadow:0 6px 16px rgba(58,36,26,.18);
+    transform:scale(1.16);
+
+    img { transform:scale(1.08); }
+  }
+
+  &:active { transform:scale(1.23); }
+}
 
 .site-tab {
   font-size:1.375rem;
@@ -267,7 +333,7 @@
     position:absolute;
     margin:0;
     top:14px;
-    font-size:1rem;
+    font-size:1.125rem;
     transform:translateX(-50%);
     left:50%;
     background-color:#fff; 

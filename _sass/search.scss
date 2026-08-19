@@ -6,9 +6,10 @@
   left:0;
   position:fixed;
   display:none;
-  background:rgba(255,255,255,0.875);
+  background:rgba(255,255,255,.92);
   z-index:999;
   text-align:center;
+  font-family:"Inter", "Noto Sans KR", Arial, sans-serif;
 
   ul, input {
     min-width:20rem;
@@ -20,26 +21,26 @@
     padding:0;
     overflow-y:auto;
     max-height:60vh;
-    border-bottom:2px solid #aaa;
-    box-shadow:0px 4px 8px 0 #ccc;
+    border-bottom:2px solid #97CD97;
+    box-shadow:0 8px 20px rgba(52,92,50,.14);
 
     i {
       margin-right:0.5rem;
-      color:#666;
+      color:#345C32;
     }
 
     &::-webkit-scrollbar {
       width:8px;
-      background-color:#ddd;
+      background-color:#e6f4e9;
     }
-    &::-webkit-scrollbar-thumb { background-color:rosybrown; }
+    &::-webkit-scrollbar-thumb { background-color:#97CD97; }
   }
 
   &.active{ display:flex; }
 }
 
 .wave {
-  background:rgba(253, 177, 55, 0.5);
+  background:rgba(151,205,151,.72);
   border-radius:0 0 250% 250%;
   position:fixed;
   width:200%;
@@ -52,11 +53,13 @@
   z-index:-1;
 }
 .wave:nth-of-type(2) {
+  background:rgba(167,240,221,.78);
   top:-1.5em;
   animation:wave 18s linear reverse infinite;
   opacity:0.75;
 }
 .wave:nth-of-type(3) {
+  background:rgba(156,172,84,.68);
   top:-3em;
   animation:wave 20s -1s reverse infinite;
   opacity:0.875;
@@ -71,23 +74,46 @@
 }
 
 .search-box {
+  position:relative;
   margin:auto;
   margin-top:2rem;
-
-  mark { 
-    margin-bottom:1rem;
-    color:#fff !important;
-    opacity:0.8;
-    font-size:1.5rem;
-    font-weight:200;
-    display:block;
-  }
 
   input {
     font-size:1.25rem;
     padding:8px;
-    border:2px solid #aaa;
-    background:none;
+    border:2px solid #345C32;
+    background:#fff;
+    color:#345C32;
+    font-family:"Inter", "Noto Sans KR", Arial, sans-serif;
+  }
+}
+
+#btn-close-search {
+  position:absolute;
+  top:-3.5rem;
+  right:0;
+  display:flex;
+  width:2.75rem;
+  height:2.75rem;
+  align-items:center;
+  justify-content:center;
+  border:1px solid #97CD97;
+  border-radius:50%;
+  background:#fff;
+  color:#345C32;
+  cursor:pointer;
+  transition:background-color .2s ease, transform .2s ease;
+
+  svg {
+    width:1.3rem;
+    fill:none;
+    stroke:currentColor;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background:#A7F0DD;
+    transform:scale(1.1);
   }
 }
 
@@ -118,7 +144,7 @@
     border-radius:50%;
     transform:translateY(50%);
     font-size:14px;
-    background:slategrey !important;
+    background:#345C32 !important;
 
     svg { 
       fill:#fff !important;
@@ -131,10 +157,10 @@
   list-style:none;
   text-align:justify;
   padding:8px;
-  border:1px solid #aaa;
+  border:1px solid #97CD97;
   background:#fff;
 
-  &:hover { background:#ffe7a0; }
+  &:hover { background:#A7F0DD; }
 
   table {
     th, td { 
@@ -145,7 +171,7 @@
     td { font-size:0.875rem; }
 
     svg {
-      background-color:darkslategrey;  
+      background-color:#345C32;
       mask-repeat:no-repeat;
       display:inline-flex;
       width:14px;
@@ -153,7 +179,7 @@
       transform:translateY(2px);
     }
     .ico-book {
-      background-color:dodgerblue !important;
+      background-color:#9CAC54 !important;
       -webkit-mask-image:url($baseurl + '/assets/img/icon/book-solid.svg');
       mask-image:url($baseurl + '/assets/img/icon/book-solid.svg');
     }
@@ -170,12 +196,12 @@
       mask-image:url($baseurl + '/assets/img/icon/calendar-days-regular.svg');
     }
     .ico-book, th .ico-folder { width:18px; }
-    th .ico-folder { background-color:mediumseagreen !important; }
+    th .ico-folder { background-color:#97CD97 !important; }
   }
 
   .highlight {
     font-weight:900;
-    color:yellowgreen !important;
+    color:#345C32 !important;
   }
 }
 
@@ -191,11 +217,15 @@
 
 .search-box { 
   margin-top:4rem; 
+}
 
-  mark { 
-    font-size:2.5rem;
-    margin-bottom:2rem;
-  }
+#btn-close-search {
+  top:50%;
+  right:calc(100% + 1rem);
+  transform:translateY(-50%);
+
+  &:hover,
+  &:focus-visible { transform:translateY(-50%) scale(1.1); }
 }
 
 .search-box input {
