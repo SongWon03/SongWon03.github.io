@@ -30,16 +30,6 @@
   }
   #btn-nav { right:0; }
   #btn-search { right:38px; }
-  #btn-brightness { right:76px; }
-
-  .ico-dark {
-    display:block;
-    &.active{ display:none; }
-  }
-  .ico-light {
-    display:none;
-    &.active{ display:block; }
-  }
 }
 
 .site-tab img { display: none; }
@@ -48,19 +38,11 @@
   img {
     display:none;
     width:9rem;
-    aspect-ratio:1;
-    border-radius:50%;
-    outline:4.5rem solid rgba(64,64,64,0.5);
-    outline-offset:-4.5rem;
-    transition:.3s;
-
-    &:hover {
-      outline:4px solid orange;
-      outline-offset:8px;
-    }
+    height:9rem;
+    object-fit:contain;
+    outline:3px solid rgba(255,255,255,.85);
+    outline-offset:4px;
   }
-
-  img + img { border-radius:50%; }
 }
 
 .site-tab {
@@ -170,20 +152,6 @@
     position:relative;
     transition:all .3s;
   }
-  .ico-dark, .ico-light { 
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
-  }
-  .ico-dark {
-    transform:translate(-50%, -50%) scale(1);
-    &.active{ transform:translate(-50%, -50%) scale(0); }
-  }
-  .ico-light {
-    transform:translate(-50%, -50%) scale(0);
-    &.active{ transform:translate(-50%, -50%) scale(1); }
-  }
 }
 
 @include mq(tablet){
@@ -191,7 +159,6 @@
 .side-banner {
   button { font-size:1.75rem; }
   #btn-search { right:60px; }
-  #btn-brightness { right:120px; }
 }
 
 .site-tab { 
@@ -228,7 +195,11 @@
     font-size:1.5rem;
   }
   #btn-search { right:69px; }
-  #btn-brightness { right:138px; }
+}
+
+.site-avatar {
+  display:inline-block;
+  transform:translateX(-.75rem);
 }
 
 .site-avatar img { display:inline-block; }
@@ -238,6 +209,7 @@
   padding:1rem;
   text-align:center;
   position:relative;
+  transform:translateX(-.5rem);
 }
 
 .site-name {

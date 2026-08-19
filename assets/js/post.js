@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){
     var innerContent = document.querySelector('main');
-    let currentTheme = localStorage.getItem('theme');
 
     // tocbot
     var headings = innerContent.querySelectorAll('h1, h2');
@@ -119,13 +118,6 @@ document.addEventListener('DOMContentLoaded', function(){
         });
     });
 
-    // Code highlighter
-    if (currentTheme === 'dark'){
-        // Disable highlighter default color theme
-        Array.from(innerContent.querySelectorAll('pre')).forEach(function (codeblock){
-            codeblock.classList.add('pre-dark');
-        });
-    }
 });
 
 window.addEventListener('load', function(){
@@ -157,21 +149,13 @@ window.addEventListener('load', function(){
         });
     });
 
-    // Initialize/Change Giscus theme
-    var giscusTheme = "light";
-
+    // Initialize Giscus
     const giscus_repo = document.querySelector('meta[name="giscus_repo"]').content;
     const giscus_repoId = document.querySelector('meta[name="giscus_repoId"]').content;
     const giscus_category = document.querySelector('meta[name="giscus_category"]').content;
     const giscus_categoryId = document.querySelector('meta[name="giscus_categoryId"]').content;
 
     if (giscus_repo !== undefined) {
-        let currentTheme = localStorage.getItem('theme');
-
-        if (currentTheme === 'dark'){
-            giscusTheme = "noborder_gray";
-        }
-
         let giscusAttributes = {
             "src": "https://giscus.app/client.js",
             "data-repo": giscus_repo,
@@ -181,7 +165,7 @@ window.addEventListener('load', function(){
             "data-mapping": "pathname",
             "data-reactions-enabled": "1",
             "data-emit-metadata": "1",
-            "data-theme": giscusTheme,
+            "data-theme": "light",
             "data-lang": "en",
             "crossorigin": "anonymous",
             "async": "",

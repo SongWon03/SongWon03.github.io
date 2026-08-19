@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function(){
         const prevButton = document.querySelector("#prev-button");
         const pageKey = "pageKey=" + document.URL;
 
-        const paginationLimit = 6;
+        const paginationLimit = 9;
         const pageCount = Math.ceil(listItems.length / paginationLimit);
         let currentPage = 1;
 

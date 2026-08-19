@@ -5,20 +5,20 @@ $baseurl: "{{ site.baseurl }}";
 html, body {
   margin:0;
   padding:0;
+  font-family:"Inter", "Noto Sans KR", Arial, sans-serif;
 }
 
 .fonts-loaded {
-  a, span, p { font-family:"Nunito Sans", 'Lucida Sans', sans-serif; }
-  h1, h2, h3 { font-family:"Lato", Helvetica, sans-serif; }
-  mark { font-family:'Righteous', sans-serif; }
+  a, span, p { font-family:"Inter", "Noto Sans KR", Arial, sans-serif; }
+  h1, h2, h3, mark { font-family:"Inter", "Noto Sans KR", Arial, sans-serif; }
 }
 
 a { text-decoration:none; }
 a, span, p, h1, h2, h3, i { color:#3A241A; }
-a, span, p { font-family:'Lucida Sans', sans-serif; }
+a, span, p { font-family:"Inter", "Noto Sans KR", Arial, sans-serif; }
 h1, h2, h3, mark {
   margin:0;
-  font-family:Helvetica, sans-serif;
+  font-family:"Inter", "Noto Sans KR", Arial, sans-serif;
 }
 mark { background-color:transparent; }
 
@@ -34,6 +34,7 @@ button {
   border:none;
   background:none;
   padding:0;
+  font:inherit;
 }
 
 /* Disable default input cancel button */
@@ -63,4 +64,3 @@ input::-webkit-search-results-decoration{
 @import "toc";
 @import "post";
 @import "search";
-@import "darkmode";
