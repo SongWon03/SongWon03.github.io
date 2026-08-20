@@ -205,7 +205,6 @@
   min-height:100%;
   background:none;
   align-items:flex-end;
-  transform:translateX(-1rem);
 }
 
 .side-banner{
@@ -355,8 +354,8 @@
   top:50%;
   right:2rem;
   transform:translateY(-50%);
-  width:clamp(10.5rem, calc((100vw - var(--pagewidth-desktop))/2 - 2rem), 12rem);
-  padding:.875rem;
+  width:10rem;
+  padding:.75rem;
   border:none;
   border-radius:.75rem;
   background:rgba(255,255,255,.94);
@@ -367,7 +366,7 @@
   &-title {
     margin:0 0 .75rem;
     color:#000;
-    font-size:1.125rem;
+    font-size:1rem;
     font-weight:700;
     letter-spacing:.04em;
   }
@@ -385,13 +384,13 @@
 
   span {
     color:#000;
-    font-size:1rem;
+    font-size:.875rem;
     white-space:nowrap;
   }
 
   strong {
     color:#AAD31E;
-    font-size:calc(1.6rem + 2px);
+    font-size:1.5rem;
     line-height:1;
   }
 }
