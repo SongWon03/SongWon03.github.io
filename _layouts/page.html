@@ -77,7 +77,7 @@
         <script defer src="{{ '/assets/js/highlight.min.js' | prepend: site.baseurl }}"></script>
     {% endif %}
     {% if page_type == "category" and page_level == 1 and site.goatcounter_code %}
-        <script defer src="{{ '/assets/js/visitor-counter.js' | prepend: site.baseurl }}"></script>
+        <script src="{{ '/assets/js/visitor-counter.js' | prepend: site.baseurl }}?v={{ site.time | date: '%s' }}"></script>
     {% endif %}
     <script src="{{ '/assets/js/common.js' | prepend: site.baseurl }}"></script>
     {% include search_event.html %}
