@@ -167,6 +167,16 @@ main {
     margin-top:3rem;
     margin-bottom:1rem;
   }
+
+  mark {
+    color:inherit;
+    background-color:#fff29a;
+    padding:0 .15em;
+    border-radius:.15em;
+    box-decoration-break:clone;
+    -webkit-box-decoration-break:clone;
+  }
+
   h1, .sh1 { font-size:1.75rem; }
   h2, .sh2 { font-size:1.375rem; }
   h3, .sh3 { font-size:1.125rem; }
