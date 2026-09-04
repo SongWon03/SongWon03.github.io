@@ -56,7 +56,7 @@ Therapeutics 분야에서는 protein design 도구들을 이용해서 꾸준하�
 
 ## 2.2 Benchmarking prediction of GPCR-peptide complexes
 
-수집한 113개의 구조들을 대상으로 저자들은 `AF2IG`, `Boltz-2`, `RF3`가 원래 구조를 얼마나 잘 예측하는지 평가하였다. 이때 receptor에 해당하는 GPCR의 구조는 template로 입력하였고, de novo peptide prediction의 상황을 가정하기 위해서 multiple sequence alignments (MSAs) 정보 없이 구조를 에측시켰다. 각각의 complexes는 각 모델마다 50개의 서로 다른 seed를 이용하여 여러 번 예측하였다. 예측 이후에는 template를 기준으로 구조를 superimpose한 뒤, natural peptide인 reference structure와 예측된 peptide structure와의 구조적 차이를 DockQ score를 통해 평가하였다.  
+수집한 113개의 구조들을 대상으로 저자들은 `AF2IG`, `Boltz-2`, `RF3`가 원래 구조를 얼마나 잘 예측하는지 평가하였다. 이때 receptor에 해당하는 GPCR의 구조는 template로 입력하였고, de novo peptide prediction의 상황을 가정하기 위해서 multiple sequence alignments (MSAs) 정보 없이 구조를 예측시켰다. 각각의 complexes는 각 모델마다 50개의 서로 다른 seed를 이용하여 여러 번 예측하였다. 예측 이후에는 template를 기준으로 구조를 superimpose한 뒤, natural peptide인 reference structure와 예측된 peptide structure와의 구조적 차이를 DockQ score를 통해 평가하였다.  
 
 **DockQ:** 0~1 사이의 값으로 표현되는 단백질 구조 예측 모델의 정확도 지표로, fraction of retrieved native contacts ($F_{nat}$), LRMS (for Ligand), IRMS (for interface)의 값을 반영하고 있음. 값에 따라 아래와 같이 discrete하게 예측의 quality를 분류할 수도 있음. 
 - `incorrect`: DockQ < 0.23
@@ -78,9 +78,9 @@ Therapeutics 분야에서는 protein design 도구들을 이용해서 꾸준하�
 **Fig 4. DockQ scores stratified by training set inclusion**  
 <br>
 
-다음으로 저자들은 구조 예측 모델의 성능이 학습 데이터 내에 포함 유무에 따라 달라지는 지 확인하였다. 각 구조 예측 모델의 출시일은 `AF2IG` (2021/10/30), `Boltz-2` (2023/01/06), `RF3` (2024/01/01)이고, PDB 구조의 ID 혹은 다른 ID이지만 동일한 구조의 release date를 기준으로 예측 모델 출시일 전이면 `pre cufoff`, 후면 `post cufoff`로 분류해 에측 성능을 비교하였다. 그 결과는 **Fig 4**에서 확인할 수 있는데, 특히 `AF2IG`가 `high quality` DockQ score로 예측할 확률이 15.8%에서 3.2%로 크게 감소하였다. 이 차이는 가장 늦게 나온 `RF3`에서 가장 적었는데, 나는 이를 상대적으로 많은 단백질이 학습 데이터에 포함되었기 떄문으로 생각한다. 
+다음으로 저자들은 구조 예측 모델의 성능이 학습 데이터 내에 포함 유무에 따라 달라지는 지 확인하였다. 각 구조 예측 모델의 출시일은 `AF2IG` (2021/10/30), `Boltz-2` (2023/01/06), `RF3` (2024/01/01)이고, PDB 구조의 ID 혹은 다른 ID이지만 동일한 구조의 release date를 기준으로 예측 모델 출시일 전이면 `pre cufoff`, 후면 `post cufoff`로 분류해 예측 성능을 비교하였다. 그 결과는 **Fig 4**에서 확인할 수 있는데, 특히 `AF2IG`가 `high quality` DockQ score로 예측할 확률이 15.8%에서 3.2%로 크게 감소하였다. 이 차이는 가장 늦게 나온 `RF3`에서 가장 적었는데, 나는 이를 상대적으로 많은 단백질이 학습 데이터에 포함되었기 떄문으로 생각한다. 
 
-추가로 구조 예측 모델의 DockQ 점수는 seed에 의존적이었다고 한다. `AF2IG`의 경우 동일한 구조에 대해서 seed에 따라 DockQ 점수가 0.03 ~ 0.85까지도 차이났다. `Boltz-2`의 경우는 대부분의 peptide에 대해서 seed에 따른 넓은 DockQ score spread를 보였다. 즉, GPCR-peptide의 경우는 일반적으로 많은 seed를 이용해 구조 에측을 하면 `Boltz-2`로부터 나오는 DockQ score가 제일 높은 경향이 있다는 것이다.  
+추가로 구조 예측 모델의 DockQ 점수는 seed에 의존적이었다고 한다. `AF2IG`의 경우 동일한 구조에 대해서 seed에 따라 DockQ 점수가 0.03 ~ 0.85까지도 차이났다. `Boltz-2`의 경우는 대부분의 peptide에 대해서 seed에 따른 넓은 DockQ score spread를 보였다. 즉, GPCR-peptide의 경우는 일반적으로 많은 seed를 이용해 구조 예측을 하면 `Boltz-2`로부터 나오는 DockQ score가 제일 높은 경향이 있다는 것이다.  
 <br>
 
 ![](https://journals.plos.org/plosone/article/figure/image?size=large&id=10.1371/journal.pone.0355549.g005)
@@ -125,8 +125,8 @@ Therapeutics 분야에서는 protein design 도구들을 이용해서 꾸준하�
 ## 2.6 Comparing the sampling of BindCraft, BoltzGen and RFdiffusion3
 
 마지막으로 저자들은 `BindCraft`, `BoltzGen`, and `RFdiffusion3`의 3개 도구를 이용해서 
-1) Angiotensin II receptor type 2 (AT$_{2}$) receptor with its endogenous peptide Ang II (8 residues)
-2) Endothelin receptor type B (ET$_{B}$) in complex with Sarafotoxin S6b (22 residues) 
+1) Angiotensin II receptor type 2 (AT${_2}$) receptor with its endogenous peptide Ang II (8 residues)
+2) Endothelin receptor type B (ET${_B}$) in complex with Sarafotoxin S6b (22 residues) 
 3) Nociceptin (NOP) receptor in complex with its endogenous Nociceptin peptide (14 residues)  
 
 의 3가지 target complex에 대해 10,000개의 designs를 생성하였다. 저자들은 binding pocket-intruding peptide terminus와 가장 가까운 4~6개의 residue를 hotspot으로 사용하였고, 원본 peptide를 mimic하기 위해서 서열의 길이를 원본과 동일하게 유지하였다. 저자들은 아래의 두 가지 scoring fucntion을 통해서 GPCR design에서 흔하게 발생하는 문제인 **hotspot과 가깝지만 transmembrane region에 붙는 error**를 filtering하였다.  
@@ -147,7 +147,7 @@ Therapeutics 분야에서는 protein design 도구들을 이용해서 꾸준하�
 **Fig 9. Structural deviations of repredictions of selected designed peptides with AF2IG, Boltz-2, and RF3, respectively.**  
 <br>
 
-마지막으로 저자들은 각 receptor와 각 design method마다 binding pocket 내에 있으면서 clash가 없는 designs 중에서 10개의 서열, 즉 총 90개의 peptide를 random sampling (along **Fig 8**'s y-axis)하였다. 그리고 나서 `AF2IG`, `Boltz-2`, `RF3`를 이용해 50개 seed로 구조를 다시 예측하고, 원래 design과의 DockQ 유사도를 측정하였다 (**Fig 9**). 그림의 왼쪽 분포들이 그 결과인데, 이를 통해 전반적으로 generative design model과 동일 계열의 structure prediction model을 사용할 때 예측력이 가장 좋은 경향을 보였다. 하지만 `high quality`로 분류되는 비율이 낮아, 저자들은 이것이 구조 에측 모델의 문제인지, design model의 inverse folding 문제인지를 확인하기 위해서 각 designed backbone에 대한 서열을 `ProteinMPNN` (temperature 0.05)을 이용하여 다시 sampling하였다. 그 결과 서열의 recovery는 비슷했지만, 전반적으로 DockQ의 `medium quality` 및 `acceptable`의 비율이 증가하였고, 이를 통해 저자들은 `ProteinMPNN`이 구조에 대한 어느정도 optimized 서열을 sampling하기 때문에 이와 같은 결과가 나온 것 같다는 설명을 제시하였다.  
+마지막으로 저자들은 각 receptor와 각 design method마다 binding pocket 내에 있으면서 clash가 없는 designs 중에서 10개의 서열, 즉 총 90개의 peptide를 random sampling (along **Fig 8**'s y-axis)하였다. 그리고 나서 `AF2IG`, `Boltz-2`, `RF3`를 이용해 50개 seed로 구조를 다시 예측하고, 원래 design과의 DockQ 유사도를 측정하였다 (**Fig 9**). 그림의 왼쪽 분포들이 그 결과인데, 이를 통해 전반적으로 generative design model과 동일 계열의 structure prediction model을 사용할 때 예측력이 가장 좋은 경향을 보였다. 하지만 `high quality`로 분류되는 비율이 낮아, 저자들은 이것이 구조 예측 모델의 문제인지, design model의 inverse folding 문제인지를 확인하기 위해서 각 designed backbone에 대한 서열을 `ProteinMPNN` (temperature 0.05)을 이용하여 다시 sampling하였다. 그 결과 서열의 recovery는 비슷했지만, 전반적으로 DockQ의 `medium quality` 및 `acceptable`의 비율이 증가하였고, 이를 통해 저자들은 `ProteinMPNN`이 구조에 대한 어느정도 optimized 서열을 sampling하기 때문에 이와 같은 결과가 나온 것 같다는 설명을 제시하였다.  
 <br>
 
 # 3. Discussion
